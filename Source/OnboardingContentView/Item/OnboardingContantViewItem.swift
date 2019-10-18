@@ -112,8 +112,8 @@ private extension OnboardingContentViewItem {
         }
 
         for (attribute, constant) in [
-            (NSLayoutConstraint.Attribute.leading, padding),
-            (NSLayoutConstraint.Attribute.trailing, -padding)
+            (NSLayoutConstraint.Attribute.leading, padding+10),
+            (NSLayoutConstraint.Attribute.trailing, -padding-10)
             ] {
             (onView, label) >>>- {
                 $0.attribute = attribute
@@ -140,7 +140,7 @@ private extension OnboardingContentViewItem {
             return
         }
 
-        for (attribute, constant) in [(NSLayoutConstraint.Attribute.leading, padding), (NSLayoutConstraint.Attribute.trailing, -padding)] {
+        for (attribute, constant) in [(NSLayoutConstraint.Attribute.leading, padding+10), (NSLayoutConstraint.Attribute.trailing, -padding-10)] {
             (onView, label) >>>- {
                 $0.attribute = attribute
                 $0.constant = constant
